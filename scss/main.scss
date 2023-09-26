@@ -1,0 +1,104 @@
+@import "config";
+@import "utilities";
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Roboto:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Playfair+Display&family=Roboto:wght@100;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  color: #000;
+}
+
+#main-nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      margin-left: 1.5rem;
+    }
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      color: #fff;
+      margin-left: 1rem;
+      padding: 0.5rem 1rem;
+      background: linear-gradient(to right, #ecc16e, #ea5174);
+      border-radius: 20px;
+    }
+  }
+}
+
+#host-content .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+
+  .graphics {
+    position: relative;
+
+    img {
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: center;
+      transform: translate(-50%, -50%);
+
+      &:first-child {
+        transform: translate(-50%, -50%) rotate(-40deg);
+      }
+
+      &:nth-child(2) {
+        transform: translate(-50%, -50%) rotate(-26deg);
+      }
+
+      &:nth-child(3) {
+        transform: translate(-50%, -50%) rotate(-13deg);
+      }
+    }
+  }
+
+  .email-subscription {
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & * {
+        height: 100%;
+      }
+    }
+  }
+}
+
+@import "media";
