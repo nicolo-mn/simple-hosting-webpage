@@ -81,7 +81,8 @@ input[class^="btn-"]:hover {
   box-sizing: border-box; }
 
 body {
-  font-family: "Lato", sans-serif; }
+  font-family: "Lato", sans-serif;
+  background-color: #f9f4e8; }
 
 ul {
   list-style: none; }
@@ -100,12 +101,6 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  #main-nav .container ul {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    #main-nav .container ul li {
-      margin-left: 1.5rem; }
   #main-nav .container .logo {
     display: flex;
     justify-content: center;
@@ -117,37 +112,62 @@ h3 {
       background: linear-gradient(to right, #ecc16e, #ea5174);
       border-radius: 20px; }
 
-#host-content .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 3rem; }
-  #host-content .container .graphics {
-    position: relative; }
-    #host-content .container .graphics img {
-      height: 100%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform-origin: center;
-      transform: translate(-50%, -50%); }
-      #host-content .container .graphics img:first-child {
-        transform: translate(-50%, -50%) rotate(-40deg); }
-      #host-content .container .graphics img:nth-child(2) {
-        transform: translate(-50%, -50%) rotate(-26deg); }
-      #host-content .container .graphics img:nth-child(3) {
-        transform: translate(-50%, -50%) rotate(-13deg); }
-  #host-content .container .email-subscription form input[type="email"] {
-    margin-right: 1rem;
-    border-radius: 4px;
-    border: none;
-    padding: 1rem 1rem;
-    width: 60%; }
-    #host-content .container .email-subscription form input[type="email"]:focus {
-      outline: none; }
-  #host-content .container .email-subscription .unsubscribe {
+#host-content {
+  padding: 6rem 0; }
+  #host-content .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem; }
+    #host-content .container .graphics {
+      position: relative; }
+      #host-content .container .graphics img {
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: center;
+        transform: translate(-50%, -50%); }
+        #host-content .container .graphics img:first-child {
+          transform: translate(-50%, -50%) rotate(-40deg); }
+        #host-content .container .graphics img:nth-child(2) {
+          transform: translate(-50%, -50%) rotate(-26deg); }
+        #host-content .container .graphics img:nth-child(3) {
+          transform: translate(-50%, -50%) rotate(-13deg); }
+    #host-content .container .email-subscription form input[type="email"] {
+      margin-right: 1rem;
+      border-radius: 4px;
+      border: none;
+      padding: 1rem 1rem;
+      width: 60%; }
+      #host-content .container .email-subscription form input[type="email"]:focus {
+        outline: none; }
+    #host-content .container .email-subscription .unsubscribe {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      text-align: center; }
+      #host-content .container .email-subscription .unsubscribe img {
+        margin-right: 1rem; }
+
+#main-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  #main-footer .container .help {
     display: flex;
-    justify-content: left;
-    align-items: center;
-    text-align: center; }
-    #host-content .container .email-subscription .unsubscribe img {
+    justify-content: center;
+    align-items: center; }
+    #main-footer .container .help img {
       margin-right: 1rem; }
+    #main-footer .container .help p {
+      color: #000;
+      line-height: 1.5; }
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  ul li {
+    margin-right: 1.5rem; }
+  ul.list li a:hover {
+    color: #ea5174; }
