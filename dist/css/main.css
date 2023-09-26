@@ -136,9 +136,18 @@ h3 {
         transform: translate(-50%, -50%) rotate(-26deg); }
       #host-content .container .graphics img:nth-child(3) {
         transform: translate(-50%, -50%) rotate(-13deg); }
-  #host-content .container .email-subscription form {
+  #host-content .container .email-subscription form input[type="email"] {
+    margin-right: 1rem;
+    border-radius: 4px;
+    border: none;
+    padding: 1rem 1rem;
+    width: 60%; }
+    #host-content .container .email-subscription form input[type="email"]:focus {
+      outline: none; }
+  #host-content .container .email-subscription .unsubscribe {
     display: flex;
-    justify-content: center;
-    align-items: center; }
-    #host-content .container .email-subscription form * {
-      height: 100%; }
+    justify-content: left;
+    align-items: center;
+    text-align: center; }
+    #host-content .container .email-subscription .unsubscribe img {
+      margin-right: 1rem; }
