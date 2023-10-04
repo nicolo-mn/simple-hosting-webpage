@@ -114,47 +114,45 @@ h3 {
       background: linear-gradient(to right, #ecc16e, #ea5174);
       border-radius: 20px; }
 
-#host-content {
-  padding: 8rem 0; }
-  #host-content .container {
+#host-content .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  #host-content .container .graphics {
+    display: grid; }
+    #host-content .container .graphics img {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      width: 80%;
+      align-self: center;
+      justify-self: end;
+      transform-origin: center; }
+      #host-content .container .graphics img:first-child {
+        transform: rotate(-40deg);
+        z-index: 1; }
+      #host-content .container .graphics img:nth-child(2) {
+        transform: rotate(-26deg);
+        z-index: 2; }
+      #host-content .container .graphics img:nth-child(3) {
+        transform: rotate(-13deg);
+        z-index: 3; }
+      #host-content .container .graphics img:nth-child(4) {
+        z-index: 4; }
+  #host-content .container .email-subscription form input[type="email"] {
+    margin-right: 1rem;
+    border-radius: 4px;
+    border: none;
+    padding: 1rem 1rem;
+    width: 60%; }
+    #host-content .container .email-subscription form input[type="email"]:focus {
+      outline: none; }
+  #host-content .container .email-subscription .unsubscribe {
     display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    #host-content .container .graphics {
-      display: grid; }
-      #host-content .container .graphics img {
-        grid-column: 1 / -1;
-        grid-row: 1 / -1;
-        width: 80%;
-        align-self: center;
-        justify-self: end;
-        transform-origin: center; }
-        #host-content .container .graphics img:first-child {
-          transform: rotate(-40deg);
-          z-index: 1; }
-        #host-content .container .graphics img:nth-child(2) {
-          transform: rotate(-26deg);
-          z-index: 2; }
-        #host-content .container .graphics img:nth-child(3) {
-          transform: rotate(-13deg);
-          z-index: 3; }
-        #host-content .container .graphics img:nth-child(4) {
-          z-index: 4; }
-    #host-content .container .email-subscription form input[type="email"] {
-      margin-right: 1rem;
-      border-radius: 4px;
-      border: none;
-      padding: 1rem 1rem;
-      width: 60%; }
-      #host-content .container .email-subscription form input[type="email"]:focus {
-        outline: none; }
-    #host-content .container .email-subscription .unsubscribe {
-      display: flex;
-      justify-content: left;
-      align-items: center;
-      text-align: center; }
-      #host-content .container .email-subscription .unsubscribe img {
-        margin-right: 1rem; }
+    justify-content: left;
+    align-items: center;
+    text-align: center; }
+    #host-content .container .email-subscription .unsubscribe img {
+      margin-right: 1rem; }
 
 #main-footer .container {
   display: flex;
@@ -178,6 +176,13 @@ ul {
     margin-right: 1.5rem; }
   ul.list li a:hover {
     color: #ea5174; }
+
+@media (min-width: 900px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh; } }
 
 @media (max-width: 900px) {
   #main-nav .container .hamb-menu {
