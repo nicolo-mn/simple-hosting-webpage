@@ -101,6 +101,8 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  #main-nav .container .hamb-menu {
+    display: none; }
   #main-nav .container .logo {
     display: flex;
     justify-content: center;
@@ -115,24 +117,29 @@ h3 {
 #host-content {
   padding: 8rem 0; }
   #host-content .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 3rem; }
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
     #host-content .container .graphics {
-      position: relative; }
+      display: grid; }
       #host-content .container .graphics img {
-        height: 140%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform-origin: center;
-        transform: translate(-50%, -50%); }
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        width: 80%;
+        align-self: center;
+        justify-self: end;
+        transform-origin: center; }
         #host-content .container .graphics img:first-child {
-          transform: translate(-50%, -50%) rotate(-40deg); }
+          transform: rotate(-40deg);
+          z-index: 1; }
         #host-content .container .graphics img:nth-child(2) {
-          transform: translate(-50%, -50%) rotate(-26deg); }
+          transform: rotate(-26deg);
+          z-index: 2; }
         #host-content .container .graphics img:nth-child(3) {
-          transform: translate(-50%, -50%) rotate(-13deg); }
+          transform: rotate(-13deg);
+          z-index: 3; }
+        #host-content .container .graphics img:nth-child(4) {
+          z-index: 4; }
     #host-content .container .email-subscription form input[type="email"] {
       margin-right: 1rem;
       border-radius: 4px;
@@ -171,3 +178,10 @@ ul {
     margin-right: 1.5rem; }
   ul.list li a:hover {
     color: #ea5174; }
+
+@media (max-width: 900px) {
+  #main-nav .container .hamb-menu {
+    display: block;
+    cursor: pointer; }
+  #main-nav .container ul {
+    display: none; } }

@@ -35,6 +35,10 @@ h3 {
   justify-content: space-between;
   align-items: center;
 
+  .hamb-menu {
+    display: none;
+  }
+
   .logo {
     display: flex;
     justify-content: center;
@@ -54,31 +58,37 @@ h3 {
   padding: 8rem 0;
 
   .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     .graphics {
-      position: relative;
-
+      display: grid;
       img {
-        height: 140%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        width: 80%;
+        align-self: center;
+        justify-self: end;
         transform-origin: center;
-        transform: translate(-50%, -50%);
 
         &:first-child {
-          transform: translate(-50%, -50%) rotate(-40deg);
+          transform: rotate(-40deg);
+          z-index: 1;
         }
 
         &:nth-child(2) {
-          transform: translate(-50%, -50%) rotate(-26deg);
+          transform: rotate(-26deg);
+          z-index: 2;
         }
 
         &:nth-child(3) {
-          transform: translate(-50%, -50%) rotate(-13deg);
+          transform: rotate(-13deg);
+          z-index: 3;
+        }
+
+        &:nth-child(4) {
+          z-index: 4;
         }
       }
     }

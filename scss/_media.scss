@@ -1,5 +1,20 @@
 // Tablets & Smaller
-@media (max-width: 800px) {
+@media (max-width: 900px) {
+  #main-nav .container {
+    .hamb-menu {
+      display: block;
+      cursor: pointer;
+    }
+
+    ul {
+      display: none;
+    }
+  }
+
+  #host-content {
+    .container {
+    }
+  }
 }
 
 // Mobile
