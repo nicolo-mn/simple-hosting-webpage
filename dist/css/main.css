@@ -177,7 +177,7 @@ ul {
   ul.list li a:hover {
     color: #ea5174; }
 
-@media (min-width: 900px) {
+@media (min-width: 901px) {
   body {
     display: flex;
     flex-direction: column;
@@ -189,4 +189,27 @@ ul {
     display: block;
     cursor: pointer; }
   #main-nav .container ul {
-    display: none; } }
+    display: none; }
+  #host-content .container {
+    display: grid;
+    grid-template-areas: "graphics" "text";
+    padding-bottom: 1rem; }
+    #host-content .container .graphics {
+      grid-area: graphics; }
+      #host-content .container .graphics img {
+        justify-self: center;
+        width: 60%; }
+    #host-content .container .email-subscription {
+      grid-area: text; }
+  #main-footer {
+    padding: 1rem 0; } }
+
+@media (max-width: 500px) {
+  #host-content .container .graphics {
+    padding: 2rem 0; }
+  #main-footer .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start; }
+    #main-footer .container .help {
+      padding-top: 2rem; } }
